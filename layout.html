@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>後台-首頁</title>
+    <link rel="stylesheet" href="./scss/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="d-flex">
+        <!-- 左側選單開始 -->
+        <aside class="sidebar vh-100 pt-3 border-end d-flex bg-success flex-column">
+            <!-- 1. 後台選單標題 -->
+            <div class="px-4 text-light h4">
+                <i class="bi bi-puzzle-fill pe-1"></i>
+                <strong class="" >Dashboard</strong>
+            </div>
+            <!-- 2. 選單 -->
+            <div class="overflow-auto mt-3"><!-- overflow-auto是卡拉動的卷軸 -->
+                <div>
+                    <a href="#" class="sidebar-link text-info">
+                        <div class="px-4"><i class="bi bi-house me-3"></i>首頁</div>
+                    </a>
+                </div>
+                <div>
+                    <a href="#menuOrder" class="sidebar-link text-info" data-bs-toggle="collapse" >
+                        <div class="d-flex justify-content-between px-4">
+                            <p class="mb-0"><i class="bi bi-card-list me-3"></i>訂單管理資料</p>
+                            <i class="bi bi-caret-down"></i>
+                        </div>
+                    </a>
+                    <div class="collapse" id="menuOrder" >
+                        <a href="#" class="sidebar-link text-info">
+                            <div class="ps-5">訂單列表</div>
+                        </a>
+                        <a href="#" class="sidebar-link text-info">
+                            <div class="ps-5">單一訂單細節</div>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <a href="#" class="sidebar-link text-info">
+                        <div class="px-4"><i class="bi bi-person-circle me-3"></i></i>個人資料</div>
+                    </a>
+                </div>
+            </div>
+            <!-- 3. 登出按鈕 -->
+            <a href="#" class="text-info px-4 mt-auto sidebar-link d-flex "><!-- 因為是在flex結構內，所以用margin-auto可挑整位置 -->
+                <i class="bi bi-box-arrow-left me-3 "></i>
+                <div class="">登出</div>
+            </a>
+        </aside>
+        <!-- 左側選單結束 -->
+        <main class="main ">
+            <!-- 導覽列開始 -->
+            <div class=" sticky-top bg-white w-100 shadow-sm d-flex justify-content-between">
+                <!-- a連結加入d-inline-block就不會占滿整個空間，可以調整 -->
+                <!-- 讓a連結點擊後，可切換選單，加上id -->
+               <a href="#" class="d-inline-block text-dark py-3 px-4 border-end" id="toggle-btn">
+                <i class="bi bi-list h5"></i>
+                </a>
+                <div class="d-flex align-items-center pe-4 ">
+                    <a href="" class="me-4 text-dark"><i class="bi bi-envelope"></i></a>
+                    <a href="" class="text-dark"><i class="bi bi-bell"></i></a>
+                </div>
+            </div>
+            <!-- 導覽列結束 -->
+            <!-- 主要內容開始 -->
+            <div class="p-4">
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="card  ">
+                            <div class="card-header">
+                                <p class="mb-0">關於我</9>
+                            </div>
+                            <div class="card-body d-flex flex-column align-items-center p-0 ">
+                                <div class="person-img bg-cover ">
+                                </div>
+                                <div class="txt p-3 ">
+                                    <h6 class="fw-bold">王小明</h6>
+                                    <div class="d-flex mb-2 text-secondary mb-3">
+                                        <i class="bi bi-geo-alt-fill me-1"></i>
+                                        <p class="mb-0"><small>奧地利帝國維也納</small></p>
+                                    </div>
+                                    <h6 class="fw-bolder">關於我</h6>
+                                    <p class=""><small>是出身維也納的象徵主義畫家，也是維也納分離派運動最具代表性的成員之一。克林姆特以其繪畫、壁畫、素描和其他藝術品而聞名。</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 ">
+                        <div class="card ">
+                            <div class="card-header">
+                                <p class="mb-0">最新動態</p>
+                            </div>
+                            <div class="card-body">
+                                <!-- 1 . -->
+                                <div>
+                                    <div class="item d-flex justify-content-between mb-3">
+                                        <div class="d-flex align-items-center">
+                                            <div class="new-1 bg-cover me-2"></div>
+                                            <div class="txt">
+                                                <h6 class="fw-bold mb-1">周澄澄</h6>
+                                                <p class="text-muted mb-0"><small>5月11日來自iPhone</small></p>
+                                            </div>
+                                        </div>
+                                        <p class="mb-0 text-muted"><small>2天前</small></p>
+                                    </div>
+                                    <p class="mb-0"><small>亞可的同班同學，誕生於英國的名門魔女家系。頭腦聰明，擁有高超的魔法能力，被稱作露娜諾娃創辦以來最優秀的學生。認真且正義感強烈，也因此常與亞可有所衝突實際上是幫忙收爛攤子。</small></p>
+                                    <hr>
+                                </div>
+                                <!-- 2 . -->
+                                <div>
+                                    <div class="item d-flex justify-content-between mb-3">
+                                        <div class="d-flex align-items-center">
+                                            <div class="new-2 bg-cover me-2"></div>
+                                            <div class="txt">
+                                                <h6 class="fw-bold mb-1">黃以萱</h6>
+                                                <p class="text-muted mb-0"><small>3月15日來自iPhone</small></p>
+                                            </div>
+                                        </div>
+                                        <p class="mb-0 text-muted"><small>6天前</small></p>
+                                    </div>
+                                    <p class="mb-0"><small>洛蒂因為是魔女家庭出身而經常遭到鄰居家的小孩嘲笑，這也是洛蒂與《日暮》相遇的原因。 因為小時候大部分時間都用來讀《日暮》,使她忘記了自己被嘲笑的煩惱。</small>
+                                    </p>
+                                    <hr>
+                                </div>
+                                <!-- 3 . -->
+                                <div>
+                                    <div class="item d-flex justify-content-between mb-3">
+                                        <div class="d-flex align-items-center">
+                                            <div class="new-3 bg-cover me-2"></div>
+                                            <div class="txt">
+                                                <h6 class="fw-bold mb-1">鄭美美</h6>
+                                                <p class="text-muted mb-0"><small>7月11日來自iPhone</small></p>
+                                            </div>
+                                        </div>
+                                        <p class="mb-0 text-muted"><small>14天前</small></p>
+                                    </div>
+                                    <p class="mb-0"><small>露娜諾娃學生的生活並非一帆風順。在地城探索活動中，她偶然在古代巨龍的背後撿到了閃亮夏莉歐的閃光杖。古代巨龍引發了超級麻煩妄圖拿走魔導石，她與同伴一起奮力與其纏鬥，而在最後的時刻，她引發了夏莉歐奇蹟的再現——閃光箭矢。</small>
+                                    </p>
+                                    <hr>
+                                </div>
+                                <!-- 1 . -->
+                                <div>
+                                    <div class="item d-flex justify-content-between mb-3">
+                                        <div class="d-flex align-items-center">
+                                            <div class="new-1 bg-cover me-2"></div>
+                                            <div class="txt">
+                                                <h6 class="fw-bold mb-1">周澄澄</h6>
+                                                <p class="text-muted mb-0"><small>5月11日來自iPhone</small></p>
+                                            </div>
+                                        </div>
+                                        <p class="mb-0 text-muted"><small>2天前</small></p>
+                                    </div>
+                                    <p class="mb-0"><small>亞可的同班同學，誕生於英國的名門魔女家系。頭腦聰明，擁有高超的魔法能力，被稱作露娜諾娃創辦以來最優秀的學生。認真且正義感強烈，也因此常與亞可有所衝突實際上是幫忙收爛攤子。</small>
+                                    </p>
+                                    <hr>
+                                </div>
+                                <!-- 2 . -->
+                                <div>
+                                    <div class="item d-flex justify-content-between mb-3">
+                                        <div class="d-flex align-items-center">
+                                            <div class="new-2 bg-cover me-2"></div>
+                                            <div class="txt">
+                                                <h6 class="fw-bold mb-1">黃以萱</h6>
+                                                <p class="text-muted mb-0"><small>3月15日來自iPhone</small></p>
+                                            </div>
+                                        </div>
+                                        <p class="mb-0 text-muted"><small>6天前</small></p>
+                                    </div>
+                                    <p class="mb-0"><small>洛蒂因為是魔女家庭出身而經常遭到鄰居家的小孩嘲笑，這也是洛蒂與《日暮》相遇的原因。 因為小時候大部分時間都用來讀《日暮》,使她忘記了自己被嘲笑的煩惱。</small>
+                                    </p>
+                                    <hr>
+                                </div>
+                                <!-- 3 . -->
+                                <div>
+                                    <div class="item d-flex justify-content-between mb-3">
+                                        <div class="d-flex align-items-center">
+                                            <div class="new-3 bg-cover me-2"></div>
+                                            <div class="txt">
+                                                <h6 class="fw-bold mb-1">鄭美美</h6>
+                                                <p class="text-muted mb-0"><small>7月11日來自iPhone</small></p>
+                                            </div>
+                                        </div>
+                                        <p class="mb-0 text-muted"><small>14天前</small></p>
+                                    </div>
+                                    <p class="mb-0">
+                                        <small>露娜諾娃學生的生活並非一帆風順。在地城探索活動中，她偶然在古代巨龍的背後撿到了閃亮夏莉歐的閃光杖。古代巨龍引發了超級麻煩妄圖拿走魔導石，她與同伴一起奮力與其纏鬥，而在最後的時刻，她引發了夏莉歐奇蹟的再現——閃光箭矢。</small>
+                                    </p>
+                                    <hr>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 主要內容結束 -->
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <script src="./js/all.js"></script>
+</body>
+</html>
