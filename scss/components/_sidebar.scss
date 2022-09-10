@@ -1,0 +1,121 @@
+// 定義sidebar寬度
+$sidebar-width:280px;
+.bg-cover{
+    background-position: center center;
+    background-size: cover;
+}
+
+// 行動版
+// 定義兩個元件
+.sidebar{
+    width:$sidebar-width;
+    margin-left:-$sidebar-width; //用margin向左推移280px，就可隱藏選單
+    transition:margin-left .25s; //作轉場動畫，指定margin-left的時候，
+    position: fixed; //固定選單
+    top:0; //靠齊上面
+.sidebar-link {
+    color: $dark;
+    display: block;
+    text-decoration: none;
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
+
+    &:hover {
+        background-color: rgba($light, 0.1);
+        }
+        
+    }
+
+    .sidebar-link.active {
+        position: relative;
+        color: $primary  !important;
+        background-color: rgba($primary, 0.16);
+
+        &::after {
+            content: "";
+            position:absolute;
+            top: 0;
+            left: 2px;
+            height: 100%;
+            width: 3px;
+            background: $primary;
+        }
+    }
+}
+.main{
+    width:100%; //預設是滿寬
+    background: rgba($info,.1);
+}
+
+// 展開sidebar
+.sidebar-toggled{
+    .sidebar{
+        margin-left:0;
+    }
+    .main{
+        margin-left:$sidebar-width ; //使按鈕位置正確
+    }
+}
+
+// 桌面板 (up)
+// 在大螢幕尺寸使用
+
+@include media-breakpoint-up(lg) {
+    .sidebar {
+        width: $sidebar-width;
+        margin-left:0; //讓sidebar出現
+     }
+    .main {
+        width:calc(100vw - #{$sidebar-width}); //calc()可做不同單位的運算，整體空間減去280px
+     //calc把變數視為字串，前面加上#{}
+     margin-left: $sidebar-width; //使main位置正確
+     transition: margin-left .25s;
+     }
+
+    //  展開
+        .sidebar-toggled{
+            .sidebar{
+                margin-left: -$sidebar-width;
+            }
+            .main{
+                width: 100%;
+                margin-left: 0; //main區塊靠齊左側
+               
+            }
+        }
+
+}
+.border-top-4{
+    border-top: 4px $gray-400 solid;
+}
+.bg-green{
+    background:$bg-green ;
+}
+
+.nav-mail:hover i{
+ color:$primary;
+}
+.person-img {
+   background-image: url(../img/1.jpg);
+    
+    width: 100%;
+    height: 300px;
+}
+.new-1{
+    background-image: url(../img/2.jpg);
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+}
+.new-2 {
+    background-image: url(../img/3.jpg);
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+}
+.new-3 {
+    background-image: url(../img/4.jpg);
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+}
